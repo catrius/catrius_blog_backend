@@ -6,7 +6,7 @@ from blog.models.post import Post
 
 
 class PostAdmin(ModelAdmin):
-    list_display = ('title', 'category', 'excerpt', 'tag')
+    list_display = ('title', 'category', 'excerpt', 'tags')
 
 
 class CategoryAdmin(ModelAdmin):
