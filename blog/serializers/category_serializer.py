@@ -1,9 +1,9 @@
-from rest_framework.serializers import HyperlinkedModelSerializer
+from rest_framework.serializers import ModelSerializer
 
 from blog.models import Category
 
 
-class CategorySerializer(HyperlinkedModelSerializer):
+class CategorySerializer(ModelSerializer):
     class Meta:
         model = Category
-        fields = ['url', 'name', 'description']
+        fields = ['pk', 'name', 'description']

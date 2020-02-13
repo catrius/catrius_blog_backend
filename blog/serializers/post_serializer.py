@@ -1,9 +1,9 @@
-from rest_framework.serializers import HyperlinkedModelSerializer
+from rest_framework.serializers import ModelSerializer
 
 from blog.models import Post
 
 
-class PostSerializer(HyperlinkedModelSerializer):
+class PostSerializer(ModelSerializer):
     class Meta:
         model = Post
-        fields = ['url', 'title', 'category', 'content', 'excerpt', 'tags']
+        fields = ['pk', 'title', 'category', 'content', 'excerpt', 'tags']
