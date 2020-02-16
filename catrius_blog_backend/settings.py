@@ -35,7 +35,9 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+]
 
 
 # Application definition
@@ -52,6 +54,7 @@ DJANGO_APPS = [
 LIBRARY_APPS = [
     'rest_framework',
     'django_extensions',
+    'corsheaders',
 ]
 
 LOCAL_APPS = [
@@ -68,6 +71,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'catrius_blog_backend.urls'
@@ -136,3 +141,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# A list of origins that are authorized to make cross-site HTTP requests
+# https://pypi.org/project/django-cors-headers/
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]
