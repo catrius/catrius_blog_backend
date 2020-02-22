@@ -2,7 +2,7 @@ from django.db.models import Model, TextField, CharField
 
 
 class Category(Model):
-    name = CharField(max_length=128)
+    name = CharField(max_length=128, unique=True)
     description = TextField()
 
     class Meta:
