@@ -1,7 +1,12 @@
-from rest_framework.relations import SlugRelatedField
 from rest_framework.serializers import ModelSerializer
 
-from blog.models import Post
+from blog.models import Post, Category
+
+
+class PostCategorySerializer(ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['pk', 'name']
 
 
 class PostSerializer(ModelSerializer):
@@ -9,7 +14,4 @@ class PostSerializer(ModelSerializer):
         model = Post
         fields = ['pk', 'title', 'category', 'content', 'excerpt', 'tags', 'created', 'modified']
 
-    category = SlugRelatedField(
-        read_only=True,
-        slug_field='name',
-    )
+    category = PostCategorySerializer()
