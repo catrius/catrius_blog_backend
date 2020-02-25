@@ -2,7 +2,7 @@ from rest_framework.fields import IntegerField
 from rest_framework.serializers import ModelSerializer
 
 from blog.models import Category
-from blog.serializers.post_serializer import PostSerializer
+from blog.serializers.post import PostSerializer
 
 
 class CategorySerializer(ModelSerializer):

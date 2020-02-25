@@ -1,7 +1,7 @@
 from rest_framework.viewsets import ReadOnlyModelViewSet
 
 from blog.models import Post
-from blog.serializers.post_serializer import PostSerializer
+from blog.serializers.post import PostSerializer
 
 
 class PostViewSet(ReadOnlyModelViewSet):
