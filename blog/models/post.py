@@ -8,7 +8,7 @@ class Post(Model):
     category = ForeignKey('blog.category', CASCADE, related_name='posts')
     content = TextField()
     excerpt = CharField(max_length=1024)
-    tags = ArrayField(CharField(max_length=60))
+    tags = ArrayField(CharField(max_length=60), blank=True)
     created = DateTimeField()
     modified = DateTimeField()
 
