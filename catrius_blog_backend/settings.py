@@ -147,3 +147,9 @@ STATIC_URL = '/static/'
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
 ]
+
+# https://www.django-rest-framework.org/api-guide/pagination/
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'blog.pagination.CountedPageNumberPagination',
+    'PAGE_SIZE': 12
+}
