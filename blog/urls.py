@@ -5,7 +5,7 @@ from blog.views.category import CategoryViewSet
 from blog.views.post import PostViewSet
 
 router = routers.DefaultRouter()
-router.register(r'posts', PostViewSet)
+router.register(r'posts', PostViewSet, 'posts')
 router.register(r'categories', CategoryViewSet)
 
 urlpatterns = [
