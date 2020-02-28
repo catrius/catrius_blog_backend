@@ -7,3 +7,4 @@
 # Pyenv
 /.python-version
 .env
+/media/

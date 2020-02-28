@@ -12,6 +12,7 @@ psycopg2 = "^2.8.4"
 djangorestframework = "^3.11.0"
 django-extensions = "^2.2.8"
 django-cors-headers = "^3.2.1"
+Pillow = "^7.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.6"

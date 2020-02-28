@@ -148,8 +148,17 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
 ]
 
+# Custom Rest Framework pagination
 # https://www.django-rest-framework.org/api-guide/pagination/
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'blog.pagination.CountedPageNumberPagination',
     'PAGE_SIZE': 12
 }
+
+# Absolute filesystem path to the directory that will hold user-uploaded files.
+# https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-MEDIA_ROOT
+MEDIA_ROOT = f'{BASE_DIR}/media/'
+
+# URL that handles the media served from MEDIA_ROOT, used for managing stored files
+# https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-MEDIA_URL
+MEDIA_URL = '/media/'

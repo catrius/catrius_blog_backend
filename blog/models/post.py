@@ -1,5 +1,5 @@
 from django.contrib.postgres.fields import ArrayField
-from django.db.models import Model, TextField, ForeignKey, CASCADE, CharField, DateTimeField
+from django.db.models import Model, TextField, ForeignKey, CASCADE, CharField, DateTimeField, ImageField
 from django.utils import timezone
 
 
@@ -9,6 +9,7 @@ class Post(Model):
     content = TextField()
     excerpt = CharField(max_length=1024)
     tags = ArrayField(CharField(max_length=60), blank=True)
+    thumbnail = ImageField(upload_to='photos/%Y/%m/%d', null=True, blank=True)
     created = DateTimeField()
     modified = DateTimeField()
 
