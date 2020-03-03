@@ -37,6 +37,7 @@ DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = [
     'localhost',
+    '192.168.0.108',
 ]
 
 
@@ -146,6 +147,7 @@ STATIC_URL = '/static/'
 # https://pypi.org/project/django-cors-headers/
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'http://192.168.0.108:3000',
 ]
 
 # Custom Rest Framework pagination
