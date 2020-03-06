@@ -1,6 +1,6 @@
-from django.contrib.postgres.fields import ArrayField
-from django.db.models import Model, TextField, ForeignKey, CASCADE, CharField, DateTimeField, ImageField
+from django.db.models import Model, TextField, ForeignKey, CASCADE, CharField, DateTimeField
 from django.utils import timezone
+from django_resized import ResizedImageField
 
 
 class Post(Model):
@@ -8,8 +8,14 @@ class Post(Model):
     category = ForeignKey('blog.category', CASCADE, related_name='posts')
     content = TextField()
     excerpt = CharField(max_length=1024)
-    tags = ArrayField(CharField(max_length=60), blank=True)
-    thumbnail = ImageField(upload_to='photos/%Y/%m/%d', null=True, blank=True)
+    thumbnail = ResizedImageField(
+        upload_to='photos/%Y/%m/%d',
+        size=[660, 370],
+        quality=100,
+        crop=['middle', 'center'],
+        null=True,
+        blank=True
+    )
     created = DateTimeField()
     modified = DateTimeField()
 

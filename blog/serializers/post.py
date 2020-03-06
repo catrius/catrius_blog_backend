@@ -13,6 +13,6 @@ class PostCategorySerializer(ModelSerializer):
 class PostSerializer(NoneOmittedSerializerMixin, ModelSerializer):
     class Meta:
         model = Post
-        fields = ['pk', 'title', 'category', 'content', 'excerpt', 'tags', 'thumbnail', 'created', 'modified']
+        fields = ['pk', 'title', 'category', 'content', 'excerpt', 'thumbnail', 'created', 'modified']
 
     category = PostCategorySerializer()
