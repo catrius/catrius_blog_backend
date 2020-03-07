@@ -124,6 +124,14 @@ version = "0.3.9"
 
 [[package]]
 category = "main"
+description = "Full-text multi-table search application for Django. Easy to install and use, with good performance."
+name = "django-watson"
+optional = false
+python-versions = "*"
+version = "1.5.4"
+
+[[package]]
+category = "main"
 description = "Web APIs for Django, made easy."
 name = "djangorestframework"
 optional = false
@@ -482,7 +490,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
 [metadata]
-content-hash = "efde2f539f71ffc03a500494c6ea4e8b2af0d74df51f0870307d39f7d3cec99c"
+content-hash = "c0e8d5f0d28c5085c3941bff6227d921f07f67b8a0f03e30d22050c6eda95c1f"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -532,6 +540,9 @@ django-extensions = [
 ]
 django-resized = [
     {file = "django-resized-0.3.9.tar.gz", hash = "sha256:11a53661379b4f960e881a8c5b8abb8e486eef629e787025ffc4587f33797fc4"},
+]
+django-watson = [
+    {file = "django-watson-1.5.4.tar.gz", hash = "sha256:e579af1eed61cb7463d66f9c469978d0aeb8db6bc3af7675ce7402d9d283220a"},
 ]
 djangorestframework = [
     {file = "djangorestframework-3.11.0-py3-none-any.whl", hash = "sha256:05809fc66e1c997fd9a32ea5730d9f4ba28b109b9da71fccfa5ff241201fd0a4"},

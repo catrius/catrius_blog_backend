@@ -55,6 +55,7 @@ LIBRARY_APPS = [
     'rest_framework',
     'django_extensions',
     'corsheaders',
+    'watson',
 ]
 
 LOCAL_APPS = [

@@ -1,4 +1,5 @@
 from rest_framework.viewsets import ReadOnlyModelViewSet
+from watson import search as watson
 
 from blog.models import Post
 from blog.serializers.post import PostSerializer
@@ -10,6 +11,12 @@ class PostViewSet(ReadOnlyModelViewSet):
     def get_queryset(self):
         queryset = Post.objects.all()
         category = self.request.query_params.get('category', None)
-        if category is None:
-            return queryset
-        return queryset.filter(category__pk=category)
+        search_query = self.request.query_params.get('q', None)
+
+        if category is not None:
+            return queryset.filter(category__pk=category)
+
+        if search_query is not None:
+            return watson.filter(Post, search_query)
+
+        return queryset
