@@ -18,6 +18,8 @@ env = environ.Env(
     DEBUG=(bool, False),
     SECRET_KEY=(str, ''),
     DATABASE_URL=(str, ''),
+    ALLOWED_HOSTS=(list, []),
+    CORS_ORIGIN_WHITELIST=(list, []),
 )
 # reading .env file
 environ.Env.read_env('.env')
@@ -35,10 +37,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '192.168.0.108',
-]
+ALLOWED_HOSTS = env('ALLOWED_HOSTS')
 
 
 # Application definition
@@ -145,10 +144,7 @@ STATIC_URL = '/static/'
 
 # A list of origins that are authorized to make cross-site HTTP requests
 # https://pypi.org/project/django-cors-headers/
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-    'http://192.168.0.108:3000',
-]
+CORS_ORIGIN_WHITELIST = env('CORS_ORIGIN_WHITELIST')
 
 # Custom Rest Framework pagination
 # https://www.django-rest-framework.org/api-guide/pagination/
