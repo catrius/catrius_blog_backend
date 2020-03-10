@@ -20,7 +20,17 @@ env = environ.Env(
     DATABASE_URL=(str, ''),
     ALLOWED_HOSTS=(list, []),
     CORS_ORIGIN_WHITELIST=(list, []),
+    AWS_ACCESS_KEY_ID=(str, ''),
+    AWS_SECRET_ACCESS_KEY=(str, ''),
+    AWS_S3_REGION_NAME=(str, ''),
+    AWS_STORAGE_BUCKET_NAME=(str, ''),
+    DEFAULT_FILE_STORAGE=(str, 'django.core.files.storage.FileSystemStorage'),
+    STATICFILES_STORAGE=(str, 'django.contrib.staticfiles.storage.StaticFilesStorage'),
+    STATIC_ROOT=(str, None),
+    MEDIA_ROOT=(str, ''),
+    MEDIA_URL=(str, ''),
 )
+
 # reading .env file
 environ.Env.read_env('.env')
 
@@ -56,6 +66,7 @@ LIBRARY_APPS = [
     'django_extensions',
     'corsheaders',
     'watson',
+    'storages',
 ]
 
 LOCAL_APPS = [
@@ -141,7 +152,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = env('STATIC_ROOT')
+# This is required by django.contrib.staticfiles. In production, it is ignored by django-storage.
 STATIC_URL = '/static/'
+MEDIA_ROOT = env('MEDIA_ROOT')
+MEDIA_URL = env('MEDIA_URL')
 
 # A list of origins that are authorized to make cross-site HTTP requests
 # https://pypi.org/project/django-cors-headers/
@@ -154,10 +169,16 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 12
 }
 
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-# https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-MEDIA_ROOT
-MEDIA_ROOT = f'{BASE_DIR}/media/'
+# AWS
+AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+AWS_S3_REGION_NAME = env('AWS_S3_REGION_NAME')
+AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_OBJECT_PARAMETERS = {
+     'CacheControl': 'max-age=86400',
+}
+AWS_DEFAULT_ACL = None
 
-# URL that handles the media served from MEDIA_ROOT, used for managing stored files
-# https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-MEDIA_URL
-MEDIA_URL = '/media/'
+# Storage
+DEFAULT_FILE_STORAGE = env('DEFAULT_FILE_STORAGE')
+STATICFILES_STORAGE = env('STATICFILES_STORAGE')

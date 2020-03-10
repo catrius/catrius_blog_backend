@@ -7,4 +7,6 @@
 # Pyenv
 /.python-version
 .env
+.production.env
 /media/
+/static/

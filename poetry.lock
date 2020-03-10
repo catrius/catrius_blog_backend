@@ -50,6 +50,36 @@ python-versions = "*"
 version = "0.1.0"
 
 [[package]]
+category = "main"
+description = "The AWS SDK for Python"
+name = "boto3"
+optional = false
+python-versions = "*"
+version = "1.12.17"
+
+[package.dependencies]
+botocore = ">=1.15.17,<1.16.0"
+jmespath = ">=0.7.1,<1.0.0"
+s3transfer = ">=0.3.0,<0.4.0"
+
+[[package]]
+category = "main"
+description = "Low-level, data-driven core of boto 3."
+name = "botocore"
+optional = false
+python-versions = "*"
+version = "1.15.17"
+
+[package.dependencies]
+docutils = ">=0.10,<0.16"
+jmespath = ">=0.7.1,<1.0.0"
+python-dateutil = ">=2.1,<3.0.0"
+
+[package.dependencies.urllib3]
+python = "<3.4.0 || >=3.5.0"
+version = ">=1.20,<1.26"
+
+[[package]]
 category = "dev"
 description = "Cross-platform colored terminal text."
 marker = "sys_platform == \"win32\" and python_version != \"3.4\" or python_version >= \"3.4\" and sys_platform == \"win32\""
@@ -124,6 +154,25 @@ version = "0.3.9"
 
 [[package]]
 category = "main"
+description = "Support for many storage backends in Django"
+name = "django-storages"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.9.1"
+
+[package.dependencies]
+Django = ">=1.11"
+
+[package.extras]
+azure = ["azure-storage-blob (>=1.3.1,<12.0.0)"]
+boto3 = ["boto3 (>=1.4.4)"]
+dropbox = ["dropbox (>=7.2.1)"]
+google = ["google-cloud-storage (>=1.15.0)"]
+libcloud = ["apache-libcloud"]
+sftp = ["paramiko"]
+
+[[package]]
+category = "main"
 description = "Full-text multi-table search application for Django. Easy to install and use, with good performance."
 name = "django-watson"
 optional = false
@@ -140,6 +189,14 @@ version = "3.11.0"
 
 [package.dependencies]
 django = ">=1.11"
+
+[[package]]
+category = "main"
+description = "Docutils -- Python Documentation Utilities"
+name = "docutils"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+version = "0.15.2"
 
 [[package]]
 category = "dev"
@@ -240,6 +297,14 @@ parso = ">=0.5.2"
 
 [package.extras]
 testing = ["colorama (0.4.1)", "docopt", "pytest (>=3.9.0,<5.0.0)"]
+
+[[package]]
+category = "main"
+description = "JSON Matching Expressions"
+name = "jmespath"
+optional = false
+python-versions = "*"
+version = "0.9.5"
 
 [[package]]
 category = "dev"
@@ -406,7 +471,7 @@ version = ">=4.0.0"
 testing = ["argcomplete", "hypothesis (>=3.56)", "nose", "requests", "mock"]
 
 [[package]]
-category = "dev"
+category = "main"
 description = "Extensions to the standard Python datetime module"
 name = "python-dateutil"
 optional = false
@@ -423,6 +488,17 @@ name = "pytz"
 optional = false
 python-versions = "*"
 version = "2019.3"
+
+[[package]]
+category = "main"
+description = "An Amazon S3 Transfer Manager"
+name = "s3transfer"
+optional = false
+python-versions = "*"
+version = "0.3.3"
+
+[package.dependencies]
+botocore = ">=1.12.36,<2.0a.0"
 
 [[package]]
 category = "main"
@@ -466,6 +542,20 @@ six = "*"
 test = ["pytest", "mock"]
 
 [[package]]
+category = "main"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+marker = "python_version != \"3.4\""
+name = "urllib3"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
+version = "1.25.8"
+
+[package.extras]
+brotli = ["brotlipy (>=0.6.0)"]
+secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
+socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7,<2.0)"]
+
+[[package]]
 category = "dev"
 description = "Measures number of Terminal column cells of wide-character codes"
 name = "wcwidth"
@@ -490,7 +580,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
 [metadata]
-content-hash = "c0e8d5f0d28c5085c3941bff6227d921f07f67b8a0f03e30d22050c6eda95c1f"
+content-hash = "05447a28d258e7c5fc4e0198fea0bd2106d856856ed3673695b5d61db3363b16"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -513,6 +603,14 @@ attrs = [
 backcall = [
     {file = "backcall-0.1.0.tar.gz", hash = "sha256:38ecd85be2c1e78f77fd91700c76e14667dc21e2713b63876c0eb901196e01e4"},
     {file = "backcall-0.1.0.zip", hash = "sha256:bbbf4b1e5cd2bdb08f915895b51081c041bac22394fdfcfdfbe9f14b77c08bf2"},
+]
+boto3 = [
+    {file = "boto3-1.12.17-py2.py3-none-any.whl", hash = "sha256:ef2d050e0c37e00dab6ff1135befe7ed4b9e1ec26c752b8ad01d043e184ea6d1"},
+    {file = "boto3-1.12.17.tar.gz", hash = "sha256:13ac5526d80e1f1c9f7adcaeae7237f8bd1a5f268e918ca16e770eb865d3292b"},
+]
+botocore = [
+    {file = "botocore-1.15.17-py2.py3-none-any.whl", hash = "sha256:17a70c5d8743237896907d00f3de0f51d31aeca863ab0da8d0d8c178608b7ce1"},
+    {file = "botocore-1.15.17.tar.gz", hash = "sha256:b09aed94cd7a01fbccbbf5746b69ca62ed37c0feaed42e0420f9a121ae7df755"},
 ]
 colorama = [
     {file = "colorama-0.4.3-py2.py3-none-any.whl", hash = "sha256:7d73d2a99753107a36ac6b455ee49046802e59d9d076ef8e47b61499fa29afff"},
@@ -541,12 +639,21 @@ django-extensions = [
 django-resized = [
     {file = "django-resized-0.3.9.tar.gz", hash = "sha256:11a53661379b4f960e881a8c5b8abb8e486eef629e787025ffc4587f33797fc4"},
 ]
+django-storages = [
+    {file = "django-storages-1.9.1.tar.gz", hash = "sha256:a59e9923cbce7068792f75344ed7727021ee4ac20f227cf17297d0d03d141e91"},
+    {file = "django_storages-1.9.1-py2.py3-none-any.whl", hash = "sha256:3103991c2ee8cef8a2ff096709973ffe7106183d211a79f22cf855f33533d924"},
+]
 django-watson = [
     {file = "django-watson-1.5.4.tar.gz", hash = "sha256:e579af1eed61cb7463d66f9c469978d0aeb8db6bc3af7675ce7402d9d283220a"},
 ]
 djangorestframework = [
     {file = "djangorestframework-3.11.0-py3-none-any.whl", hash = "sha256:05809fc66e1c997fd9a32ea5730d9f4ba28b109b9da71fccfa5ff241201fd0a4"},
     {file = "djangorestframework-3.11.0.tar.gz", hash = "sha256:e782087823c47a26826ee5b6fa0c542968219263fb3976ec3c31edab23a4001f"},
+]
+docutils = [
+    {file = "docutils-0.15.2-py2-none-any.whl", hash = "sha256:9e4d7ecfc600058e07ba661411a2b7de2fd0fafa17d1a7f7361cd47b1175c827"},
+    {file = "docutils-0.15.2-py3-none-any.whl", hash = "sha256:6c4f696463b79f1fb8ba0c594b63840ebd41f059e92b31957c46b74a4599b6d0"},
+    {file = "docutils-0.15.2.tar.gz", hash = "sha256:a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99"},
 ]
 faker = [
     {file = "Faker-4.0.1-py3-none-any.whl", hash = "sha256:ee24608768549c2c69e593e9d7a3b53c9498ae735534243ec8390cae5d529f8b"},
@@ -570,6 +677,10 @@ ipython-genutils = [
 jedi = [
     {file = "jedi-0.15.2-py2.py3-none-any.whl", hash = "sha256:1349c1e8c107095a55386628bb3b2a79422f3a2cab8381e34ce19909e0cf5064"},
     {file = "jedi-0.15.2.tar.gz", hash = "sha256:e909527104a903606dd63bea6e8e888833f0ef087057829b89a18364a856f807"},
+]
+jmespath = [
+    {file = "jmespath-0.9.5-py2.py3-none-any.whl", hash = "sha256:695cb76fa78a10663425d5b73ddc5714eb711157e52704d69be03b1a02ba4fec"},
+    {file = "jmespath-0.9.5.tar.gz", hash = "sha256:cca55c8d153173e21baa59983015ad0daf603f9cb799904ff057bfb8ff8dc2d9"},
 ]
 more-itertools = [
     {file = "more-itertools-8.1.0.tar.gz", hash = "sha256:c468adec578380b6281a114cb8a5db34eb1116277da92d7c46f904f0b52d3288"},
@@ -666,6 +777,10 @@ pytz = [
     {file = "pytz-2019.3-py2.py3-none-any.whl", hash = "sha256:1c557d7d0e871de1f5ccd5833f60fb2550652da6be2693c1e02300743d21500d"},
     {file = "pytz-2019.3.tar.gz", hash = "sha256:b02c06db6cf09c12dd25137e563b31700d3b80fcc4ad23abb7a315f2789819be"},
 ]
+s3transfer = [
+    {file = "s3transfer-0.3.3-py2.py3-none-any.whl", hash = "sha256:2482b4259524933a022d59da830f51bd746db62f047d6eb213f2f8855dcb8a13"},
+    {file = "s3transfer-0.3.3.tar.gz", hash = "sha256:921a37e2aefc64145e7b73d50c71bb4f26f46e4c9f414dc648c6245ff92cf7db"},
+]
 six = [
     {file = "six-1.14.0-py2.py3-none-any.whl", hash = "sha256:8f3cd2e254d8f793e7f3d6d9df77b92252b52637291d0f0da013c76ea2724b6c"},
     {file = "six-1.14.0.tar.gz", hash = "sha256:236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a"},
@@ -681,6 +796,10 @@ text-unidecode = [
 traitlets = [
     {file = "traitlets-4.3.3-py2.py3-none-any.whl", hash = "sha256:70b4c6a1d9019d7b4f6846832288f86998aa3b9207c6821f3578a6a6a467fe44"},
     {file = "traitlets-4.3.3.tar.gz", hash = "sha256:d023ee369ddd2763310e4c3eae1ff649689440d4ae59d7485eb4cfbbe3e359f7"},
+]
+urllib3 = [
+    {file = "urllib3-1.25.8-py2.py3-none-any.whl", hash = "sha256:2f3db8b19923a873b3e5256dc9c2dedfa883e33d87c690d9c7913e1f40673cdc"},
+    {file = "urllib3-1.25.8.tar.gz", hash = "sha256:87716c2d2a7121198ebcb7ce7cccf6ce5e9ba539041cfbaeecfb641dc0bf6acc"},
 ]
 wcwidth = [
     {file = "wcwidth-0.1.8-py2.py3-none-any.whl", hash = "sha256:8fd29383f539be45b20bd4df0dc29c20ba48654a41e661925e612311e9f3c603"},
