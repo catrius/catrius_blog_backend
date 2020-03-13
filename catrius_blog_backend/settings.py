@@ -182,3 +182,7 @@ AWS_DEFAULT_ACL = None
 # Storage
 DEFAULT_FILE_STORAGE = env('DEFAULT_FILE_STORAGE')
 STATICFILES_STORAGE = env('STATICFILES_STORAGE')
+
+# Increase to avoid '413 request entity too large', in bytes
+# https://docs.djangoproject.com/en/3.0/ref/settings/#data-upload-max-memory-size
+DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880
