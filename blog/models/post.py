@@ -12,7 +12,6 @@ class Post(Model):
         upload_to='photos/%Y/%m/%d',
         size=[660, 370],
         quality=100,
-        crop=['middle', 'center'],
         null=True,
         blank=True
     )
