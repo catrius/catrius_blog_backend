@@ -185,4 +185,6 @@ STATICFILES_STORAGE = env('STATICFILES_STORAGE')
 
 # Increase to avoid '413 request entity too large', in bytes
 # https://docs.djangoproject.com/en/3.0/ref/settings/#data-upload-max-memory-size
+# https://docs.djangoproject.com/en/3.0/ref/settings/#std:setting-FILE_UPLOAD_MAX_MEMORY_SIZE
 DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880
+FILE_UPLOAD_MAX_MEMORY_SIZE = 5242880
