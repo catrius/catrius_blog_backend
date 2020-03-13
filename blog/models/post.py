@@ -10,7 +10,7 @@ class Post(Model):
     excerpt = CharField(max_length=1024)
     thumbnail = ResizedImageField(
         upload_to='photos/%Y/%m/%d',
-        size=[660, 370],
+        size=[960, 540],
         quality=100,
         null=True,
         blank=True
