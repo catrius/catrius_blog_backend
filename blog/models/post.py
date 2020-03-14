@@ -11,7 +11,7 @@ class Post(Model):
     thumbnail = ResizedImageField(
         upload_to='photos/%Y/%m/%d',
         size=[960, 540],
-        quality=100,
+        quality=80,
         null=True,
         blank=True
     )
