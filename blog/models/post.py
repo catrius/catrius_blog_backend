@@ -1,4 +1,4 @@
-from django.db.models import Model, TextField, ForeignKey, CASCADE, CharField, DateTimeField
+from django.db.models import Model, TextField, ForeignKey, CASCADE, CharField, DateTimeField, BooleanField
 from django.utils import timezone
 from django_resized import ResizedImageField
 
@@ -6,7 +6,7 @@ from django_resized import ResizedImageField
 class Post(Model):
     title = CharField(max_length=512)
     category = ForeignKey('blog.category', CASCADE, related_name='posts')
-    content = TextField()
+    content = TextField(blank=True)
     excerpt = CharField(max_length=1024)
     thumbnail = ResizedImageField(
         upload_to='photos/%Y/%m/%d',
@@ -15,6 +15,8 @@ class Post(Model):
         null=True,
         blank=True
     )
+    caption = CharField(max_length=512, blank=True)
+    image_showing = BooleanField(default=True)
     created = DateTimeField()
     modified = DateTimeField()
 
