@@ -7,6 +7,6 @@ from blog.models import Category
 class CategorySerializer(ModelSerializer):
     class Meta:
         model = Category
-        fields = ['pk', 'name', 'description', 'post_count']
+        exclude = ['id']
 
     post_count = IntegerField(source='posts.count')

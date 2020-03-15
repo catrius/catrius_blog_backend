@@ -1,9 +1,12 @@
-from django.db.models import Model, TextField, ForeignKey, CASCADE, CharField, DateTimeField, BooleanField
+from django.db.models import Model, TextField, ForeignKey, CASCADE, CharField, DateTimeField, BooleanField, SlugField
 from django.utils import timezone
 from django_resized import ResizedImageField
 
+from blog.utils import unique_slugify
+
 
 class Post(Model):
+    slug = SlugField(max_length=512)
     title = CharField(max_length=512)
     category = ForeignKey('blog.category', CASCADE, related_name='posts')
     content = TextField(blank=True)
@@ -30,4 +33,8 @@ class Post(Model):
         if not self.id:
             self.created = timezone.now()
         self.modified = timezone.now()
+
+        if not self.slug:
+            self.slug = unique_slugify(Post, self.title)
+
         return super(Post, self).save(*args, **kwargs)

@@ -7,6 +7,7 @@ from blog.serializers.post import PostSerializer
 
 class PostViewSet(ReadOnlyModelViewSet):
     serializer_class = PostSerializer
+    lookup_field = 'slug'
 
     def get_queryset(self):
         queryset = Post.objects.all()
@@ -14,7 +15,7 @@ class PostViewSet(ReadOnlyModelViewSet):
         search_query = self.request.query_params.get('q', None)
 
         if category is not None:
-            return queryset.filter(category__pk=category)
+            return queryset.filter(category__slug=category)
 
         if search_query is not None:
             return watson.filter(Post, search_query)
