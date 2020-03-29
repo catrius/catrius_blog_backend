@@ -1,7 +1,7 @@
 from rest_framework.viewsets import ReadOnlyModelViewSet
 
 from blog.models import Category
-from blog.serializers.category import CategorySerializer
+from blog.serializers.category_serializer import CategorySerializer
 
 
 class CategoryViewSet(ReadOnlyModelViewSet):

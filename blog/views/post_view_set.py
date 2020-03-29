@@ -2,7 +2,7 @@ from rest_framework.viewsets import ReadOnlyModelViewSet
 from watson import search as watson
 
 from blog.models import Post
-from blog.serializers.post import PostSerializer
+from blog.serializers.post_serializer import PostSerializer
 
 
 class PostViewSet(ReadOnlyModelViewSet):

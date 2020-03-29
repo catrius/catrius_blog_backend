@@ -10,8 +10,8 @@ from blog.models import post, Post
 @pytest.mark.django_db
 class PostTestCase:
     def test_str(self):
-        test_post = PostFactory(title='Corona social distance story')
-        assert str(test_post) == 'Corona social distance story'
+        corona_post = PostFactory(title='Corona social distance story')
+        assert str(corona_post) == 'Corona social distance story'
 
     @pytest.mark.django_db
     def test_save(self, mocker, freezer):
