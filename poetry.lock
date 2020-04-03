@@ -186,7 +186,7 @@ description = "Full-text multi-table search application for Django. Easy to inst
 name = "django-watson"
 optional = false
 python-versions = "*"
-version = "1.5.4"
+version = "1.5.5"
 
 [[package]]
 category = "main"
@@ -817,7 +817,7 @@ django-storages = [
     {file = "django_storages-1.9.1-py2.py3-none-any.whl", hash = "sha256:3103991c2ee8cef8a2ff096709973ffe7106183d211a79f22cf855f33533d924"},
 ]
 django-watson = [
-    {file = "django-watson-1.5.4.tar.gz", hash = "sha256:e579af1eed61cb7463d66f9c469978d0aeb8db6bc3af7675ce7402d9d283220a"},
+    {file = "django-watson-1.5.5.tar.gz", hash = "sha256:456123d1601f275ef222d9ccbb3b73e7dcb70f1370e4d45651aa2d359ee6e0e3"},
 ]
 djangorestframework = [
     {file = "djangorestframework-3.11.0-py3-none-any.whl", hash = "sha256:05809fc66e1c997fd9a32ea5730d9f4ba28b109b9da71fccfa5ff241201fd0a4"},
