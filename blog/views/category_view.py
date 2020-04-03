@@ -4,7 +4,7 @@ from blog.models import Category
 from blog.serializers.category_serializer import CategorySerializer
 
 
-class CategoryViewSet(ReadOnlyModelViewSet):
-    queryset = Category.objects.all().prefetch_related('posts')
+class CategoryView(ReadOnlyModelViewSet):
+    queryset = Category.objects.all()
     serializer_class = CategorySerializer
     lookup_field = 'slug'

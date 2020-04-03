@@ -5,12 +5,12 @@ from blog.models import Post
 from blog.serializers.post_serializer import PostSerializer
 
 
-class PostViewSet(ReadOnlyModelViewSet):
+class PostView(ReadOnlyModelViewSet):
     serializer_class = PostSerializer
     lookup_field = 'slug'
 
     def get_queryset(self):
-        queryset = Post.objects.all()
+        queryset = Post.objects.all().order_by('id')
         category = self.request.query_params.get('category', None)
         search_query = self.request.query_params.get('q', None)
 
