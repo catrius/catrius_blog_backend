@@ -7,7 +7,7 @@ class PostFactory(DjangoModelFactory):
     class Meta:
         model = 'blog.Post'
 
-    title = Sequence(lambda n: f'Post {n}')
+    title = Faker('sentence')
     category = SubFactory(CategoryFactory)
     content = Faker('text')
     excerpt = Faker('text')

@@ -5,5 +5,5 @@ class CategoryFactory(DjangoModelFactory):
     class Meta:
         model = 'blog.Category'
 
-    name = Sequence(lambda n: f'Category {n}')
+    name = Faker('sentence')
     description = Faker('sentence')
