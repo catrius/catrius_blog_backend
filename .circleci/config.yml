@@ -12,9 +12,6 @@ jobs:
           command: sudo pip install poetry
           name: Install Poetry
       - run:
-          command: source $HOME/.poetry/env
-          name: Activate Poetry
-      - run:
           command: Poetry install --dev
           name: Install dependencies
       - run:
