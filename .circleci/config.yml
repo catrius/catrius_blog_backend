@@ -1,0 +1,35 @@
+version: 2.1
+
+executors:
+  default:
+    docker:
+      - image: circleci/python:latest
+      - image: circleci/postgres:latest
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: circle_test
+          POSTGRES_PASSWORD: password
+
+jobs:
+  build-test:
+    executor: default
+    steps:
+      - checkout
+      - run:
+          command: poetry config virtualenvs.create false
+          name: Disable Poetry virtualenvs creating
+      - run:
+          command: poetry install
+          name: Install dependencies
+      - run:
+          command: pytest --cov
+          name: Test
+      - run:
+          command: bash <(curl -s https://codecov.io/bash)
+          name: Upload coverage report to Codecov
+
+workflows:
+  build-test-deploy:
+    jobs:
+      - build-test
+      
