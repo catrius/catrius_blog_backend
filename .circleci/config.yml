@@ -1,0 +1,27 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@0.2.1
+
+jobs:
+  build-and-test:
+    executor: python/default
+    steps:
+      - checkout
+      - python/load-cache
+      - python/install-deps
+      - python/save-cache
+      - run:
+          command: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+          name: Install Poetry
+      - run:
+          command: Poetry install --dev
+          name: Install dependencies
+      - run:
+          command: pytest --cov
+          name: Test
+
+workflows:
+  main:
+    jobs:
+      - build-and-test
