@@ -19,15 +19,15 @@ jobs:
           name: Install dependencies
   test:
     executor: default
-    requires:
-      - build
     steps:
       - run:
           command: pytest --cov
           name: Test
 
 workflows:
-  main:
+  build-test-deploy:
     jobs:
       - build
-      - test
+      - test:
+          requires:
+            - build
