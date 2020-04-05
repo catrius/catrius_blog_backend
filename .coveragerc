@@ -1,10 +1,13 @@
 [run]
 branch = True
 source = ./
-omit = */migrations/*
+omit =
+    */migrations/*
+    catrius_blog_backend/wsgi.py
+    manage.py
+    blog/storages.py
 
 [report]
 show_missing = True
-
-[html]
-directory = html_coverage
+exclude_lines =
+    if settings.DEBUG:

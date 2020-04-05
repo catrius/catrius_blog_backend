@@ -20,4 +20,4 @@
 
 # Coverage
 /.coverage
-/html_coverage/
+/htmlcov/
