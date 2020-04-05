@@ -9,10 +9,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: sudo pip install poetry
-          name: Install Poetry
-      - run:
-          command: Poetry install --dev
+          command: poetry install --dev
           name: Install dependencies
       - run:
           command: pytest --cov
