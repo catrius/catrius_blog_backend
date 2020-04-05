@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+          command: sudo pip install poetry
           name: Install Poetry
       - run:
           command: source $HOME/.poetry/env
