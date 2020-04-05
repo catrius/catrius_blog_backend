@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: poetry install --dev
+          command: poetry install
           name: Install dependencies
       - run:
           command: pytest --cov
