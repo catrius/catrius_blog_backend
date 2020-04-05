@@ -1,11 +1,14 @@
 version: 2.1
 
-orbs:
-  python: circleci/python@0.2.1
+executors:
+  default:
+    docker:
+      - image: circleci/python:latest
+      - image: circleci/postgres:latest
 
 jobs:
-  build-and-test:
-    executor: python/default
+  build:
+    executor: default
     steps:
       - checkout
       - run:
@@ -14,6 +17,9 @@ jobs:
       - run:
           command: poetry install
           name: Install dependencies
+  test:
+    executor: default
+    steps:
       - run:
           command: pytest --cov
           name: Test
@@ -21,4 +27,5 @@ jobs:
 workflows:
   main:
     jobs:
-      - build-and-test
+      - build
+      - test
