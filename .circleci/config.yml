@@ -5,6 +5,10 @@ executors:
     docker:
       - image: circleci/python:latest
       - image: circleci/postgres:latest
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: circle_test
+          POSTGRES_PASSWORD: password
 
 jobs:
   build:
