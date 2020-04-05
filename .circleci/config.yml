@@ -9,6 +9,9 @@ jobs:
     steps:
       - checkout
       - run:
+          command: poetry config virtualenvs.create false
+          name: Disable Poetry virtualenvs creating
+      - run:
           command: poetry install
           name: Install dependencies
       - run:
