@@ -1,4 +1,4 @@
-from factory import DjangoModelFactory, Faker, Sequence
+from factory import DjangoModelFactory, Faker
 
 
 class CategoryFactory(DjangoModelFactory):
