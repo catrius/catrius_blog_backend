@@ -11,7 +11,7 @@ executors:
           POSTGRES_PASSWORD: password
 
 jobs:
-  build-test:
+  test:
     executor: default
     steps:
       - checkout
@@ -30,8 +30,25 @@ jobs:
       - run:
           command: bash <(curl -s https://codecov.io/bash)
           name: Upload coverage report to Codecov
+  deploy:
+    executor: default
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "91:4b:cf:4c:26:fc:43:e0:cc:96:41:d4:ea:cc:2d:65"
+      - run:
+          command: ssh -o "StrictHostKeyChecking no" ubuntu@13.251.91.7 'bash -li' < scripts/deploy.sh
+          name: Deploy to EC2
 
 workflows:
-  build-test-deploy:
+  test-deploy:
     jobs:
-      - build-test
+      - test
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
