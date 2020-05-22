@@ -38,7 +38,7 @@ jobs:
           fingerprints:
             - "91:4b:cf:4c:26:fc:43:e0:cc:96:41:d4:ea:cc:2d:65"
       - run:
-          command: ssh -o "StrictHostKeyChecking no" ubuntu@13.251.91.7 'bash -li' < scripts/deploy.sh
+          command: ssh -o 'StrictHostKeyChecking no' ubuntu@13.251.91.7 'bash -li' < scripts/deploy.sh
           name: Deploy to EC2
 
 workflows:
