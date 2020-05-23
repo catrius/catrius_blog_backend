@@ -27,6 +27,7 @@ class PostViewTestCase(APITestCase):
             'category': {
                 'slug': category.slug,
                 'name': category.name,
+                'description': category.description,
             },
         }
 
