@@ -22,9 +22,6 @@ jobs:
           command: poetry install
           name: Install dependencies
       - run:
-          command: flake8
-          name: flake8
-      - run:
           command: pytest --cov
           name: Test
       - run:
