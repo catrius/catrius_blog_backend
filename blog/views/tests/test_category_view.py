@@ -16,4 +16,5 @@ class CategoryViewTestCase(APITestCase):
                 'name': category.name,
                 'slug': category.slug,
                 'description': category.description,
+                'is_page': category.is_page,
             }
