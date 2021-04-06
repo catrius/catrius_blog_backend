@@ -28,6 +28,7 @@ class PostViewTestCase(APITestCase):
                 'slug': category.slug,
                 'name': category.name,
                 'description': category.description,
+                'is_page': category.is_page,
             },
         }
 
