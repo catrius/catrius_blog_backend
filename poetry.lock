@@ -1,39 +1,37 @@
 [[package]]
-category = "dev"
-description = "Disable App Nap on OS X 10.9"
-marker = "python_version >= \"3.4\" and sys_platform == \"darwin\""
 name = "appnope"
+version = "0.1.0"
+description = "Disable App Nap on OS X 10.9"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "0.1.0"
 
 [[package]]
-category = "main"
-description = "ASGI specs, helper code, and adapters"
 name = "asgiref"
+version = "3.2.7"
+description = "ASGI specs, helper code, and adapters"
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "3.2.7"
 
 [package.extras]
 tests = ["pytest (>=4.3.0,<4.4.0)", "pytest-asyncio (>=0.10.0,<0.11.0)"]
 
 [[package]]
-category = "dev"
-description = "Atomic file writes."
-marker = "sys_platform == \"win32\""
 name = "atomicwrites"
+version = "1.3.0"
+description = "Atomic file writes."
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.3.0"
 
 [[package]]
-category = "dev"
-description = "Classes Without Boilerplate"
 name = "attrs"
+version = "19.3.0"
+description = "Classes Without Boilerplate"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "19.3.0"
 
 [package.extras]
 azure-pipelines = ["coverage", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface", "pytest-azurepipelines"]
@@ -42,21 +40,20 @@ docs = ["sphinx", "zope.interface"]
 tests = ["coverage", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface"]
 
 [[package]]
-category = "dev"
-description = "Specifications for callback functions passed in to an API"
-marker = "python_version >= \"3.4\""
 name = "backcall"
+version = "0.1.0"
+description = "Specifications for callback functions passed in to an API"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "0.1.0"
 
 [[package]]
-category = "main"
-description = "The AWS SDK for Python"
 name = "boto3"
+version = "1.12.31"
+description = "The AWS SDK for Python"
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.12.31"
 
 [package.dependencies]
 botocore = ">=1.15.31,<1.16.0"
@@ -64,55 +61,53 @@ jmespath = ">=0.7.1,<1.0.0"
 s3transfer = ">=0.3.0,<0.4.0"
 
 [[package]]
-category = "main"
-description = "Low-level, data-driven core of boto 3."
 name = "botocore"
+version = "1.15.31"
+description = "Low-level, data-driven core of boto 3."
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.15.31"
 
 [package.dependencies]
 docutils = ">=0.10,<0.16"
 jmespath = ">=0.7.1,<1.0.0"
 python-dateutil = ">=2.1,<3.0.0"
-urllib3 = ">=1.20,<1.26"
+urllib3 = {version = ">=1.20,<1.26", markers = "python_version != \"3.4\""}
 
 [[package]]
-category = "dev"
-description = "Cross-platform colored terminal text."
-marker = "python_version >= \"3.4\" and sys_platform == \"win32\" or sys_platform == \"win32\""
 name = "colorama"
+version = "0.4.3"
+description = "Cross-platform colored terminal text."
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "0.4.3"
 
 [[package]]
-category = "dev"
-description = "Code coverage measurement for Python"
 name = "coverage"
+version = "5.0.4"
+description = "Code coverage measurement for Python"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
-version = "5.0.4"
 
 [package.extras]
 toml = ["toml"]
 
 [[package]]
-category = "dev"
-description = "Decorators for Humans"
-marker = "python_version >= \"3.4\""
 name = "decorator"
+version = "4.4.2"
+description = "Decorators for Humans"
+category = "dev"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*"
-version = "4.4.2"
 
 [[package]]
-category = "main"
-description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
 name = "django"
+version = "3.0.4"
+description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "3.0.4"
 
 [package.dependencies]
 asgiref = ">=3.2,<4.0"
@@ -124,50 +119,42 @@ argon2 = ["argon2-cffi (>=16.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
-category = "main"
-description = "django-cors-headers is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS)."
 name = "django-cors-headers"
+version = "3.2.1"
+description = "django-cors-headers is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS)."
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "3.2.1"
 
 [package.dependencies]
 Django = ">=1.11"
 
 [[package]]
-category = "main"
-description = "Django-environ allows you to utilize 12factor inspired environment variables to configure your Django application."
 name = "django-environ"
+version = "0.4.5"
+description = "Django-environ allows you to utilize 12factor inspired environment variables to configure your Django application."
+category = "main"
 optional = false
 python-versions = "*"
-version = "0.4.5"
 
 [[package]]
-category = "main"
-description = "Extensions for Django"
 name = "django-extensions"
+version = "2.2.9"
+description = "Extensions for Django"
+category = "main"
 optional = false
 python-versions = "*"
-version = "2.2.9"
 
 [package.dependencies]
 six = ">=1.2"
 
 [[package]]
-category = "main"
-description = "Resizes image origin to specified size."
-name = "django-resized"
-optional = false
-python-versions = "*"
-version = "0.3.9"
-
-[[package]]
-category = "main"
-description = "Support for many storage backends in Django"
 name = "django-storages"
+version = "1.9.1"
+description = "Support for many storage backends in Django"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.9.1"
 
 [package.dependencies]
 Django = ">=1.11"
@@ -181,70 +168,70 @@ libcloud = ["apache-libcloud"]
 sftp = ["paramiko"]
 
 [[package]]
-category = "main"
-description = "Full-text multi-table search application for Django. Easy to install and use, with good performance."
 name = "django-watson"
+version = "1.5.5"
+description = "Full-text multi-table search application for Django. Easy to install and use, with good performance."
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.5.5"
 
 [[package]]
-category = "main"
-description = "Web APIs for Django, made easy."
 name = "djangorestframework"
+version = "3.11.0"
+description = "Web APIs for Django, made easy."
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "3.11.0"
 
 [package.dependencies]
 django = ">=1.11"
 
 [[package]]
-category = "main"
-description = "Docutils -- Python Documentation Utilities"
 name = "docutils"
+version = "0.15.2"
+description = "Docutils -- Python Documentation Utilities"
+category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "0.15.2"
 
 [[package]]
-category = "dev"
-description = "Discover and load entry points from installed packages."
 name = "entrypoints"
+version = "0.3"
+description = "Discover and load entry points from installed packages."
+category = "dev"
 optional = false
 python-versions = ">=2.7"
-version = "0.3"
 
 [[package]]
-category = "dev"
-description = "A versatile test fixtures replacement based on thoughtbot's factory_bot for Ruby."
 name = "factory-boy"
+version = "2.12.0"
+description = "A versatile test fixtures replacement based on thoughtbot's factory_bot for Ruby."
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "2.12.0"
 
 [package.dependencies]
 Faker = ">=0.7.0"
 
 [[package]]
-category = "dev"
-description = "Faker is a Python package that generates fake data for you."
 name = "faker"
+version = "4.0.2"
+description = "Faker is a Python package that generates fake data for you."
+category = "dev"
 optional = false
 python-versions = ">=3.4"
-version = "4.0.2"
 
 [package.dependencies]
 python-dateutil = ">=2.4"
 text-unidecode = "1.3"
 
 [[package]]
-category = "dev"
-description = "the modular source code checker: pep8, pyflakes and co"
 name = "flake8"
+version = "3.7.9"
+description = "the modular source code checker: pep8, pyflakes and co"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "3.7.9"
 
 [package.dependencies]
 entrypoints = ">=0.3.0,<0.4.0"
@@ -253,27 +240,24 @@ pycodestyle = ">=2.5.0,<2.6.0"
 pyflakes = ">=2.1.0,<2.2.0"
 
 [[package]]
-category = "dev"
-description = "Let your Python tests travel through time"
 name = "freezegun"
+version = "0.3.15"
+description = "Let your Python tests travel through time"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "0.3.15"
 
 [package.dependencies]
 python-dateutil = ">=1.0,<2.0 || >2.0"
 six = "*"
 
 [[package]]
-category = "main"
-description = "WSGI HTTP Server for UNIX"
 name = "gunicorn"
+version = "20.0.4"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
 optional = false
 python-versions = ">=3.4"
-version = "20.0.4"
-
-[package.dependencies]
-setuptools = ">=3.0"
 
 [package.extras]
 eventlet = ["eventlet (>=0.9.7)"]
@@ -282,13 +266,12 @@ setproctitle = ["setproctitle"]
 tornado = ["tornado (>=0.2)"]
 
 [[package]]
-category = "dev"
-description = "Read metadata from Python packages"
-marker = "python_version < \"3.8\""
 name = "importlib-metadata"
+version = "1.6.0"
+description = "Read metadata from Python packages"
+category = "dev"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
-version = "1.6.0"
 
 [package.dependencies]
 zipp = ">=0.5"
@@ -298,40 +281,34 @@ docs = ["sphinx", "rst.linker"]
 testing = ["packaging", "importlib-resources"]
 
 [[package]]
-category = "dev"
-description = "IPython-enabled pdb"
 name = "ipdb"
+version = "0.12.3"
+description = "IPython-enabled pdb"
+category = "dev"
 optional = false
 python-versions = ">=2.7"
-version = "0.12.3"
 
 [package.dependencies]
-setuptools = "*"
-
-[package.dependencies.ipython]
-python = ">=3.4"
-version = ">=5.1.0"
+ipython = {version = ">=5.1.0", markers = "python_version >= \"3.4\""}
 
 [[package]]
-category = "dev"
-description = "IPython: Productive Interactive Computing"
-marker = "python_version >= \"3.4\""
 name = "ipython"
+version = "7.13.0"
+description = "IPython: Productive Interactive Computing"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
-version = "7.13.0"
 
 [package.dependencies]
-appnope = "*"
+appnope = {version = "*", markers = "sys_platform == \"darwin\""}
 backcall = "*"
-colorama = "*"
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
 decorator = "*"
 jedi = ">=0.10"
-pexpect = "*"
+pexpect = {version = "*", markers = "sys_platform != \"win32\""}
 pickleshare = "*"
 prompt-toolkit = ">=2.0.0,<3.0.0 || >3.0.0,<3.0.1 || >3.0.1,<3.1.0"
 pygments = "*"
-setuptools = ">=18.5"
 traitlets = ">=4.2"
 
 [package.extras]
@@ -346,241 +323,228 @@ qtconsole = ["qtconsole"]
 test = ["nose (>=0.10.1)", "requests", "testpath", "pygments", "nbformat", "ipykernel", "numpy (>=1.14)"]
 
 [[package]]
-category = "dev"
-description = "Vestigial utilities from IPython"
-marker = "python_version >= \"3.4\""
 name = "ipython-genutils"
+version = "0.2.0"
+description = "Vestigial utilities from IPython"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "0.2.0"
 
 [[package]]
-category = "dev"
-description = "An autocompletion tool for Python that can be used for text editors."
-marker = "python_version >= \"3.4\""
 name = "jedi"
+version = "0.16.0"
+description = "An autocompletion tool for Python that can be used for text editors."
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "0.16.0"
 
 [package.dependencies]
 parso = ">=0.5.2"
 
 [package.extras]
-qa = ["flake8 (3.7.9)"]
-testing = ["colorama (0.4.1)", "docopt", "pytest (>=3.9.0,<5.0.0)"]
+qa = ["flake8 (==3.7.9)"]
+testing = ["colorama (==0.4.1)", "docopt", "pytest (>=3.9.0,<5.0.0)"]
 
 [[package]]
-category = "main"
-description = "JSON Matching Expressions"
 name = "jmespath"
-optional = false
-python-versions = "*"
 version = "0.9.5"
-
-[[package]]
-category = "dev"
-description = "McCabe checker, plugin for flake8"
-name = "mccabe"
+description = "JSON Matching Expressions"
+category = "main"
 optional = false
 python-versions = "*"
-version = "0.6.1"
 
 [[package]]
+name = "mccabe"
+version = "0.6.1"
+description = "McCabe checker, plugin for flake8"
 category = "dev"
-description = "More routines for operating on iterables, beyond itertools"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "more-itertools"
+version = "8.2.0"
+description = "More routines for operating on iterables, beyond itertools"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
-version = "8.2.0"
 
 [[package]]
-category = "dev"
-description = "Core utilities for Python packages"
 name = "packaging"
+version = "20.3"
+description = "Core utilities for Python packages"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "20.3"
 
 [package.dependencies]
 pyparsing = ">=2.0.2"
 six = "*"
 
 [[package]]
-category = "dev"
-description = "A Python Parser"
-marker = "python_version >= \"3.4\""
 name = "parso"
+version = "0.6.2"
+description = "A Python Parser"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "0.6.2"
 
 [package.extras]
 testing = ["docopt", "pytest (>=3.0.7)"]
 
 [[package]]
-category = "dev"
-description = "Pexpect allows easy control of interactive console applications."
-marker = "python_version >= \"3.4\" and sys_platform != \"win32\""
 name = "pexpect"
+version = "4.8.0"
+description = "Pexpect allows easy control of interactive console applications."
+category = "dev"
 optional = false
 python-versions = "*"
-version = "4.8.0"
 
 [package.dependencies]
 ptyprocess = ">=0.5"
 
 [[package]]
-category = "dev"
-description = "Tiny 'shelve'-like database with concurrency support"
-marker = "python_version >= \"3.4\""
 name = "pickleshare"
+version = "0.7.5"
+description = "Tiny 'shelve'-like database with concurrency support"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "0.7.5"
 
 [[package]]
-category = "main"
-description = "Python Imaging Library (Fork)"
 name = "pillow"
+version = "7.0.0"
+description = "Python Imaging Library (Fork)"
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "7.0.0"
 
 [[package]]
-category = "dev"
-description = "plugin and hook calling mechanisms for python"
 name = "pluggy"
+version = "0.13.1"
+description = "plugin and hook calling mechanisms for python"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "0.13.1"
 
 [package.dependencies]
-[package.dependencies.importlib-metadata]
-python = "<3.8"
-version = ">=0.12"
+importlib-metadata = {version = ">=0.12", markers = "python_version < \"3.8\""}
 
 [package.extras]
 dev = ["pre-commit", "tox"]
 
 [[package]]
-category = "dev"
-description = "Library for building powerful interactive command lines in Python"
-marker = "python_version >= \"3.4\""
 name = "prompt-toolkit"
+version = "3.0.3"
+description = "Library for building powerful interactive command lines in Python"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
-version = "3.0.3"
 
 [package.dependencies]
 wcwidth = "*"
 
 [[package]]
-category = "main"
-description = "psycopg2 - Python-PostgreSQL Database Adapter"
 name = "psycopg2"
+version = "2.8.4"
+description = "psycopg2 - Python-PostgreSQL Database Adapter"
+category = "main"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
-version = "2.8.4"
 
 [[package]]
-category = "dev"
-description = "Run a subprocess in a pseudo terminal"
-marker = "python_version >= \"3.4\" and sys_platform != \"win32\""
 name = "ptyprocess"
+version = "0.6.0"
+description = "Run a subprocess in a pseudo terminal"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "0.6.0"
 
 [[package]]
-category = "dev"
-description = "library with cross-python path, ini-parsing, io, code, log facilities"
 name = "py"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "1.8.1"
+description = "library with cross-python path, ini-parsing, io, code, log facilities"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
-category = "dev"
-description = "Python style guide checker"
 name = "pycodestyle"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "2.5.0"
-
-[[package]]
+description = "Python style guide checker"
 category = "dev"
-description = "passive checker of Python programs"
-name = "pyflakes"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "2.1.1"
 
 [[package]]
+name = "pyflakes"
+version = "2.1.1"
+description = "passive checker of Python programs"
 category = "dev"
-description = "Pygments is a syntax highlighting package written in Python."
-marker = "python_version >= \"3.4\""
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
 name = "pygments"
+version = "2.6.1"
+description = "Pygments is a syntax highlighting package written in Python."
+category = "dev"
 optional = false
 python-versions = ">=3.5"
-version = "2.6.1"
 
 [[package]]
-category = "dev"
-description = "Python parsing module"
 name = "pyparsing"
+version = "2.4.6"
+description = "Python parsing module"
+category = "dev"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "2.4.6"
 
 [[package]]
-category = "dev"
-description = "pytest: simple powerful testing with Python"
 name = "pytest"
+version = "5.4.1"
+description = "pytest: simple powerful testing with Python"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
-version = "5.4.1"
 
 [package.dependencies]
-atomicwrites = ">=1.0"
+atomicwrites = {version = ">=1.0", markers = "sys_platform == \"win32\""}
 attrs = ">=17.4.0"
-colorama = "*"
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
+importlib-metadata = {version = ">=0.12", markers = "python_version < \"3.8\""}
 more-itertools = ">=4.0.0"
 packaging = "*"
 pluggy = ">=0.12,<1.0"
 py = ">=1.5.0"
 wcwidth = "*"
 
-[package.dependencies.importlib-metadata]
-python = "<3.8"
-version = ">=0.12"
-
 [package.extras]
-checkqa-mypy = ["mypy (v0.761)"]
+checkqa-mypy = ["mypy (==v0.761)"]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
 
 [[package]]
-category = "dev"
-description = "Pytest plugin for measuring coverage."
 name = "pytest-cov"
+version = "2.8.1"
+description = "Pytest plugin for measuring coverage."
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "2.8.1"
 
 [package.dependencies]
 coverage = ">=4.4"
 pytest = ">=3.6"
 
 [package.extras]
-testing = ["fields", "hunter", "process-tests (2.0.2)", "six", "virtualenv"]
+testing = ["fields", "hunter", "process-tests (==2.0.2)", "six", "virtualenv"]
 
 [[package]]
-category = "dev"
-description = "A Django plugin for pytest."
 name = "pytest-django"
+version = "3.9.0"
+description = "A Django plugin for pytest."
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "3.9.0"
 
 [package.dependencies]
 pytest = ">=3.6"
@@ -590,24 +554,24 @@ docs = ["sphinx", "sphinx-rtd-theme"]
 testing = ["django", "django-configurations (>=2.0)", "six"]
 
 [[package]]
-category = "dev"
-description = "Wrap tests with fixtures in freeze_time"
 name = "pytest-freezegun"
+version = "0.4.1"
+description = "Wrap tests with fixtures in freeze_time"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "0.4.1"
 
 [package.dependencies]
 freezegun = ">0.3"
 pytest = ">=3.0.0"
 
 [[package]]
-category = "dev"
-description = "Thin-wrapper around the mock package for easier use with py.test"
 name = "pytest-mock"
+version = "2.0.0"
+description = "Thin-wrapper around the mock package for easier use with py.test"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "2.0.0"
 
 [package.dependencies]
 pytest = ">=2.7"
@@ -616,67 +580,66 @@ pytest = ">=2.7"
 dev = ["pre-commit", "tox"]
 
 [[package]]
-category = "main"
-description = "Extensions to the standard Python datetime module"
 name = "python-dateutil"
+version = "2.8.1"
+description = "Extensions to the standard Python datetime module"
+category = "main"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
-version = "2.8.1"
 
 [package.dependencies]
 six = ">=1.5"
 
 [[package]]
-category = "main"
-description = "World timezone definitions, modern and historical"
 name = "pytz"
+version = "2019.3"
+description = "World timezone definitions, modern and historical"
+category = "main"
 optional = false
 python-versions = "*"
-version = "2019.3"
 
 [[package]]
-category = "main"
-description = "An Amazon S3 Transfer Manager"
 name = "s3transfer"
+version = "0.3.3"
+description = "An Amazon S3 Transfer Manager"
+category = "main"
 optional = false
 python-versions = "*"
-version = "0.3.3"
 
 [package.dependencies]
 botocore = ">=1.12.36,<2.0a.0"
 
 [[package]]
-category = "main"
-description = "Python 2 and 3 compatibility utilities"
 name = "six"
+version = "1.14.0"
+description = "Python 2 and 3 compatibility utilities"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "1.14.0"
 
 [[package]]
-category = "main"
-description = "Non-validating SQL parser"
 name = "sqlparse"
+version = "0.3.1"
+description = "Non-validating SQL parser"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "0.3.1"
 
 [[package]]
-category = "dev"
-description = "The most basic Text::Unidecode port"
 name = "text-unidecode"
+version = "1.3"
+description = "The most basic Text::Unidecode port"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "1.3"
 
 [[package]]
-category = "dev"
-description = "Traitlets Python config system"
-marker = "python_version >= \"3.4\""
 name = "traitlets"
+version = "4.3.3"
+description = "Traitlets Python config system"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "4.3.3"
 
 [package.dependencies]
 decorator = "*"
@@ -687,42 +650,42 @@ six = "*"
 test = ["pytest", "mock"]
 
 [[package]]
-category = "main"
-description = "HTTP library with thread-safe connection pooling, file post, and more."
 name = "urllib3"
+version = "1.25.8"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
-version = "1.25.8"
 
 [package.extras]
 brotli = ["brotlipy (>=0.6.0)"]
 secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
-socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7,<2.0)"]
+socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
-category = "dev"
-description = "Measures number of Terminal column cells of wide-character codes"
 name = "wcwidth"
+version = "0.1.9"
+description = "Measures number of Terminal column cells of wide-character codes"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "0.1.9"
 
 [[package]]
-category = "dev"
-description = "Backport of pathlib-compatible object wrapper for zip files"
-marker = "python_version < \"3.8\""
 name = "zipp"
+version = "3.1.0"
+description = "Backport of pathlib-compatible object wrapper for zip files"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
-version = "3.1.0"
 
 [package.extras]
 docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "de2761a550b5f6bf4e9dd57a4b5860423dab8fc26c8c7e09062e1906f5abb0c5"
+lock-version = "1.1"
 python-versions = "^3.6"
+content-hash = "02693f74c4d2eb76217c16949330c4a2e9096361f3c089438108c7526d6b41e3"
 
 [metadata.files]
 appnope = [
@@ -750,6 +713,7 @@ boto3 = [
     {file = "boto3-1.12.31.tar.gz", hash = "sha256:913fc7bbb9df147ed6fa0bd2b391469652ee8cad3e26ca2355e6ff774d9516fb"},
 ]
 botocore = [
+    {file = "botocore-1.15.31-py2.py3-none-any.whl", hash = "sha256:86e3f25c9a94e9e85915ef3dcb13b496d25873a40b81f4e23a7a0250248d1be9"},
     {file = "botocore-1.15.31.tar.gz", hash = "sha256:3d4684f61ff07aa1b4cd30d13a6b8e6416142be5a2a55aedcc1d7974b9415bb1"},
 ]
 colorama = [
@@ -808,9 +772,6 @@ django-environ = [
 django-extensions = [
     {file = "django-extensions-2.2.9.tar.gz", hash = "sha256:2f81b618ba4d1b0e58603e25012e5c74f88a4b706e0022a3b21f24f0322a6ce6"},
     {file = "django_extensions-2.2.9-py2.py3-none-any.whl", hash = "sha256:b19182d101a441fe001c5753553a901e2ef3ff60e8fbbe38881eb4a61fdd17c4"},
-]
-django-resized = [
-    {file = "django-resized-0.3.9.tar.gz", hash = "sha256:11a53661379b4f960e881a8c5b8abb8e486eef629e787025ffc4587f33797fc4"},
 ]
 django-storages = [
     {file = "django-storages-1.9.1.tar.gz", hash = "sha256:a59e9923cbce7068792f75344ed7727021ee4ac20f227cf17297d0d03d141e91"},
