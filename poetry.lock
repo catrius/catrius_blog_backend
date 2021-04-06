@@ -149,6 +149,14 @@ python-versions = "*"
 six = ">=1.2"
 
 [[package]]
+name = "django-resized"
+version = "0.3.11"
+description = "Resizes image origin to specified size."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "django-storages"
 version = "1.9.1"
 description = "Support for many storage backends in Django"
@@ -685,7 +693,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "02693f74c4d2eb76217c16949330c4a2e9096361f3c089438108c7526d6b41e3"
+content-hash = "65e9a5200be9705a331a7c7b69c3b5f1ee86c9a05c943cc2775118a0f687fbfa"
 
 [metadata.files]
 appnope = [
@@ -772,6 +780,9 @@ django-environ = [
 django-extensions = [
     {file = "django-extensions-2.2.9.tar.gz", hash = "sha256:2f81b618ba4d1b0e58603e25012e5c74f88a4b706e0022a3b21f24f0322a6ce6"},
     {file = "django_extensions-2.2.9-py2.py3-none-any.whl", hash = "sha256:b19182d101a441fe001c5753553a901e2ef3ff60e8fbbe38881eb4a61fdd17c4"},
+]
+django-resized = [
+    {file = "django-resized-0.3.11.tar.gz", hash = "sha256:77490397e94f37744f9199b7f8a5922329662dd7fc21473952ffe0417d36a9da"},
 ]
 django-storages = [
     {file = "django-storages-1.9.1.tar.gz", hash = "sha256:a59e9923cbce7068792f75344ed7727021ee4ac20f227cf17297d0d03d141e91"},

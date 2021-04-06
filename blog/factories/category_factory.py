@@ -7,3 +7,4 @@ class CategoryFactory(DjangoModelFactory):
 
     name = Faker('sentence')
     description = Faker('sentence')
+    is_page = False
