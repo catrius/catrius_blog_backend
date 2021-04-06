@@ -1,6 +1,15 @@
-from django.db.models import Model, TextField, ForeignKey, CASCADE, CharField, DateTimeField, BooleanField, SlugField
+from django.db.models import (
+    Model,
+    TextField,
+    ForeignKey,
+    CASCADE,
+    CharField,
+    DateTimeField,
+    BooleanField,
+    SlugField,
+    ImageField
+)
 from django.utils import timezone
-from django_resized import ResizedImageField
 
 from blog.utils import unique_slugify
 
@@ -11,10 +20,8 @@ class Post(Model):
     category = ForeignKey('blog.category', CASCADE, related_name='posts')
     content = TextField(blank=True)
     excerpt = CharField(max_length=1024)
-    thumbnail = ResizedImageField(
+    thumbnail = ImageField(
         upload_to='photos/%Y/%m/%d',
-        size=[960, 540],
-        quality=80,
         null=True,
         blank=True
     )
